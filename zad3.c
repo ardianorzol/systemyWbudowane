@@ -1,14 +1,12 @@
 #include <stdio.h>
 int main()
 {
-  int n, c;
+  int n, c, odp;
   printf("Podaj liczbe w dziesietnym:\n");
   scanf("%d", &n);
   printf("ktory bit bys chcial?: \n");
   scanf("%d", &c);
-    if (n >> (c - 1) & 1)
-      printf("%d bit to 1", c);
-    else
-      printf("%d bit to 0", c);
+  odp = n >> (c - 1) & 1;
+  printf("%d bit to %d", c, odp);
   return 0;
 }
